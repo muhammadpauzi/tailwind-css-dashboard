@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+  <title>Vite App</title>
+</head>
+
+<body class="antialiased bg-gray-50 ">
+
+  <div class="fixed z-50 w-full bg-gray-50 py-4" x-data="{open: false}">
+    <div class="relative items-center w-full mx-auto">
+      <div
+        class="flex flex-col w-full px-8 py-3 mx-auto lg:px-32 max-w-7xl lg:bg-none md:flex-row md:items-center md:justify-between md:py-2">
+        <div class="flex flex-row items-center justify-between lg:justify-start">
+          <div class="">
+            <a class="text-lg font-semibold tracking-tighter text-black focus:outline-none focus:ring " href="/">
+              TailwindCSS
+            </a>
+          </div>
+          <button @click="open = !open"
+            class="inline-flex items-center justify-center p-2 text-black focus:outline-none focus:text-accent-500 hover:text-accent-400 md:hidden">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path :class="{'hidden': open, 'inline-flex': !open }" class="inline-flex" d="M4 6h16M4 12h16M4 18h16"
+                stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+              <path :class="{'hidden': !open, 'inline-flex': open }" class="hidden" d="M6 18L18 6M6 6l12 12"
+                stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+            </svg>
+          </button>
+        </div>
+        <nav class="flex-col items-center justify-end flex-grow gap-3 px-5 lg:px-0 md:flex md:flex-row md:pb-0"
+          :class="{'flex': open, 'hidden': !open}">
+          <ul class="flex-col flex items-center justify-end flex-grow gap-4 md:flex-row mb-3 md:mb-0 pt-3 md:pt-0">
+            <li>
+              <a class="text-sm text-gray-600 transition-colors duration-200 hover:text-gray-900"
+                href="/documentation">Get
+                started</a>
+            </li>
+            <li>
+              <a class="text-sm text-gray-600 transition-colors duration-200 hover:text-gray-900"
+                href="/documentation">About
+                us</a>
+            </li>
+          </ul>
+          <!-- <a class="inline-flex items-center px-4 py-1 ml-3 text-sm text-white bg-blue-600 border border-transparent rounded-full hover:text-black font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 hover:bg-black/10 focus:ring-black"
+            href="https://lexingtonthemes.com/" title="resources">
+            Get free account now &nbsp;&nbsp; →
+          </a> -->
+          <a href=""
+            class="inline-flex items-center  ml-3 border border-transparent font-medium px-3 py-1 leading-6 rounded-full text-sm text-gray-600 ring-1 ring-gray-900/10 hover:ring-blue-600 hover:text-blue-600">
+            Get your free account now &rarr;</a>
+          </a>
+        </nav>
+      </div>
+    </div>
+  </div>
+
+  <section class="relative overflow-hidden" id="header" aria-labelledby="header">
+    <div class="relative px-8 pb-12 mx-auto max-w-7xl lg:px-32 pt-36">
+      <div class="pb-5 border-b border-gray-200">
+        <div class="gap-12 sm:flex sm:items-end sm:justify-between">
+          <div class="sm:w-0 sm:flex-1">
+            <div class="max-w-xl">
+              <div>
+                <span class="text-xs font-medium uppercase text-neutral-500">
+                  Website Computer Test Based
+                  <strong> 100% Free </strong>
+                </span>
+                <p class="mt-4 text-2xl font-medium tracking-tighter text-black sm:text-4xl">
+                  Accounting made <strong>simple</strong> for small businesses.
+                </p>
+                <p class="mt-4 text-sm tracking-tighter text-gray-500">
+                  Lorem ipsum dolor sit amet <strong>consectetur</strong> adipisicing elit. Illo architecto animi eaque
+                  quaerat
+                  distinctio consectetur maiores sit. Eos autem quia ducimus quidem esse.
+                </p>
+
+                <div class="mt-5 flex items-center gap-x-6">
+                  <a href="#"
+                    class="rounded-md bg-blue-600 px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition-colors duration-150">Get
+                    started</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="relative items-center w-full my-7 mx-auto">
+              <ol class="relative grid grid-cols-1 gap-3 lg:grid-cols-2 sm:grid-cols-2" role="list" x-data="{}">
+                <template x-for="i in 4">
+                  <li class="space-y-3 px-3 py-2.5 lg:px-6 lg:py-5 bg-white border-gray-100 border rounded-sm" :key="i">
+                    <a class="group" href="/">
+                      <div>
+                        <div class="py-3">
+                          <div class="flex-shrink-0 block">
+                            <div class="flex items-center">
+                              <div>
+                                <img alt="" class="inline-block object-cover rounded-xl h-9 w-9"
+                                  src="https://images.unsplash.com/photo-1602434228300-a645bce6891b?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1639&amp;q=80">
+                              </div>
+                              <div class="ml-3">
+                                <p class="text-sm text-black group-hover:text-blue-500">
+                                  Mikaela Andreuzza
+                                  <span class="text-gray-500">
+                                    in
+                                  </span>
+                                  Investiments
+                                  <span class="text-gray-500 block">
+                                    4 days ago
+                                  </span>
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <h3 class="mt-8 text-lg font-medium leading-6 text-black tracking-tighter">
+                          The Hidden Danger of QR Codes
+                        </h3>
+                      </div>
+                      <p class="mt-4 text-sm tracking-tighter text-gray-500">
+                        Lorem ipsum dolor sit amet <strong>consectetur</strong> adipisicing elit. Illo architecto
+                        animi eaque
+                        quaerat
+                        distinctio consectetur maiores sit. Eos autem quia ducimus quidem esse.
+                      </p>
+                      <div class="py-3">
+                        <div>
+                          <div class="inline-flex items-center justify-between w-full">
+                            <div>
+                              <p class="text-sm text-black group-hover:text-blue-500">
+                                Investiments
+                                <span class="text-gray-500">
+                                  ·
+                                </span>
+                                10 min
+                                read
+                              </p>
+                            </div>
+                            <div>
+                              <span>
+                                <ion-icon name="bookmark-outline"
+                                  class="w-5 text-blue-500 group-hover:text-black md hydrated" role="img"
+                                  aria-label="bookmark outline"></ion-icon>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                </template>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script type="module" src="/src/main.js"></script>
+
+</body>
+
+</html>
